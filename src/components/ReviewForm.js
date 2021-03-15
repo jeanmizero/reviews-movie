@@ -63,18 +63,18 @@ export default class ReviewForm extends React.Component {
 					<br />
 					<textarea
 						className="form-control rounded-0"
-						rows="3"
-						cols="150"
+						rows="5"
+						cols="200"
 						value={this.state.value}
 						onChange={this.handleChange}
 					/>
-					<br />
+					{/* <br />
 					<button
 						className="btn"
 						type="submit"
 						value="Submit"
 						onClick={() => this.addReview()}
-					></button>
+					></button> */}
 				</form>
 			</div>
 		);
