@@ -22,15 +22,6 @@ export default class ReviewForm extends React.Component {
 		event.preventDefault();
 		this.resetForm();
 	}
-
-	addReview() {
-		let reviews = this.state.reviews;
-		reviews.push(this.state.review);
-		this.setState({
-			reviews,
-		});
-	}
-
 	listReviews() {
 		let reviews = this.state.reviews;
 		return (
@@ -46,9 +37,11 @@ export default class ReviewForm extends React.Component {
 		);
 	}
 
-	resetForm() {
+	addReview() {
+		let reviews = this.state.reviews;
+		reviews.push(this.state.review);
 		this.setState({
-			value: " ",
+			reviews,
 		});
 	}
 
@@ -68,13 +61,6 @@ export default class ReviewForm extends React.Component {
 						value={this.state.value}
 						onChange={this.handleChange}
 					/>
-					{/* <br />
-					<button
-						className="btn"
-						type="submit"
-						value="Submit"
-						onClick={() => this.addReview()}
-					></button> */}
 				</form>
 			</div>
 		);
